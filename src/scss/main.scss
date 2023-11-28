@@ -11,12 +11,20 @@
 
 .container-gral{
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .container__cuatro {
-    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    box-sizing: border-box;
+    padding: 10px;
 }
 
 .container-1 {
@@ -51,6 +59,8 @@
         justify-content: center;  
         align-items: center;
     }
-    
+   .container__cuatro {
+        width: 100%;
+   } 
 
 }
