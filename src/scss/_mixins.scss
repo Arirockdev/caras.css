@@ -1,0 +1,33 @@
+@mixin displayFlex($flex, $direction, $justify, $align){
+    display: $flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin clipPath ($clip){
+    clip-path: $clip;
+}
+
+@mixin tamaño ($width, $height){
+    width: $width;
+    height: $height;
+}
+@mixin position ($position, $top, $rigth, $bottom, $left){
+    position: $position;
+    top: $top;
+    right: $rigth;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin borderRadius ($border-radius){
+    border-radius: $border-radius;
+}
+
+@mixin bordersRadius($top-left, $top-right, $bottom-left, $bottom-right){
+    border-top-left-radius: $top-left;
+    border-top-right-radius: $top-right;
+    border-bottom-left-radius: $bottom-left;
+    border-bottom-right-radius: $bottom-right;
+}

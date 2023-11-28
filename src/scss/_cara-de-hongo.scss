@@ -1,0 +1,70 @@
+@use './variables' as *;
+@use './mixins' as *;
+@use './resets' as *;
+@use './funciones' as *;
+
+
+
+.hongo {
+    background: background($bg-hongo);
+    @include tamaño(300px, 300px);
+    @include displayFlex(flex, column, flex-end, center);
+    
+}
+
+.hongo__sombrero--wrap {
+    filter: drop-shadow(0px 0px 5px color(black));
+}
+
+.hongo__sombrero {
+    background: background($hongo-sombrero);
+    @include tamaño(200px, 200px);
+    @include clipPath(ellipse(45% 34% at 50% 40%));
+    @include displayFlex(flex, row, space-between, strech);
+}
+
+.hongo__lunares {
+    background: background(white);
+    @include tamaño(90px, 70px);
+    @include borderRadius(100%);
+    @include position(relative, 35px, auto, auto, auto);
+    
+    &:first-child{
+        @include position(relative, 30px, 20px, auto, auto);
+        
+    }
+    &:last-child{
+        @include position(relative, 30px, auto, auto, 20px);
+    }
+}
+
+// HONGO CABEZA
+
+
+
+.hongo__cara {
+    background: background($hongo-cara);
+    @include tamaño(auto, 70px);
+    @include displayFlex(flex, row, center, center);
+    @include position(relative, -90px, auto, auto, auto);
+    @include borderRadius(44%);
+    padding: .6rem;
+    box-shadow: 0px 6.7px 5.3px color(rgba(0, 0, 0, 0.438)),
+
+
+}
+
+.hongo__ojos {
+    background: background($ojos);
+    @include tamaño(50px, 50px);
+    @include clipPath(ellipse(10% 24% at 50% 55%));
+    @include position(relative, -10px, auto, auto, auto);
+}
+
+.hongo__ojos--item {
+    background: background(white);
+    @include tamaño(auto, 14px);
+    @include clipPath(ellipse(3% 30% at 50% 55%));
+    @include position(relative, 15px, auto, auto, auto); 
+}
+             

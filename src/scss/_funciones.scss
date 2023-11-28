@@ -1,0 +1,11 @@
+@function background($background){
+    @return $background
+};
+
+@function color($color){
+    @return $color
+};
+
+@function radius($radius){
+    @return $radius
+};

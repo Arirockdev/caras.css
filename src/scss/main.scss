@@ -1,0 +1,56 @@
+@use './mixins' as *;
+
+
+
+// Estos son los scss de las caras
+@use './cara-de-hongo';
+@use './cara_dos';
+@use './cara-tres';
+@use './cara-stan';
+@use './ultima_cara';
+
+.container-gral{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__cuatro {
+    width: 600px;
+}
+
+.container-1 {
+    display: flex;
+    @include displayFlex(flex, row, center, center);
+}
+
+.container-2 {
+    display: flex; 
+}
+
+
+
+// media responsive 
+
+@media only screen and (max-width: 600px){
+    .container-gral {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .container__cuatro {
+        max-width: 600px;
+    }
+    .container-1 {
+        display: flex;
+        flex-direction: column;
+    }
+    .container-2{
+        display: flex;
+        flex-direction: column;     
+        justify-content: center;  
+        align-items: center;
+    }
+    
+
+}

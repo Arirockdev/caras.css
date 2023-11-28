@@ -1,0 +1,102 @@
+@use './variables' as *;
+@use './mixins' as *;
+@use './resets' as *;
+@use './funciones' as *;
+
+.stan__container {
+  @include tamaño(300px, 300px); 
+  background: $stan-bg;
+  @include displayFlex(flex, row, center, center);
+}
+
+
+.stan__cara {
+  @include tamaño(235px, 235px);
+  @include displayFlex(flex, column, auto, auto);
+  @include borderRadius (100%);
+  background: $stan-face;
+  box-shadow: 5px 0px 20px 2px#312e36;
+}
+
+.stan__cara .gorro__pompon {
+  @include tamaño(50px, 50px);
+  @include borderRadius(100%);
+  @include position(relative, -20px, auto, auto, auto);
+  background: $stan-hat-secondary;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.gorro__arriba {
+  @include clipPath(circle(63.7% at 49% 129%));
+  @include tamaño(240px, 90px);
+  @include position(relative, -50px, auto, auto, auto);
+  background: #5165A4;
+  margin: 0 auto;
+}
+
+.gorro__franja {
+  @include clipPath(ellipse(50% 306% at 50% 98%));
+  @include tamaño(230px, 20px);
+  @include position(relative, -62px, auto, auto, auto);
+  background: $stan-hat-secondary;
+  margin: 0 auto;
+}
+
+.stan__ojos {
+  @include tamaño(200px, 60px);
+  @include position(relative, -50px, auto, auto, auto);
+  @include displayFlex(flex, row, center, center);
+  margin: 0 auto;
+  gap: 5px; 
+
+}
+
+.stan__ojo--izq,
+.stan__ojo--der {
+  @include tamaño(50px, 65px);
+  @include borderRadius(75%);
+  background: white;
+}
+
+.stan__ojo--izq {
+  transform: rotate(40deg);
+}
+
+.stan__ojo--der{
+  transform: rotate(-40deg);
+}
+
+
+.stan__centro--izq,
+.stan__centro--der {
+  @include tamaño(10px, 10px);
+  @include borderRadius(100%);
+  background: black;
+  @include displayFlex(flex, row, auto, auto);
+}
+.stan__centro--izq{
+  @include position(relative, 20px, auto, auto, 20px);
+}
+
+.stan__centro--der {
+  @include position(relative, 20px, auto, auto, 20px);
+}
+
+
+.stan__boca {
+  @include tamaño(100px, 20px);
+  @include position(relative, -30px, auto, auto, auto);
+  margin: 0 auto;
+  @include displayFlex(flex, row, center, center);
+}
+
+.stan__div--boca{
+  @include tamaño(65px, 25px);
+  @include borderRadius(50%);
+  border: 3px solid $stan-mouth;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+}
+

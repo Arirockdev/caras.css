@@ -1,0 +1,224 @@
+@use './variables' as *;
+@use './mixins' as *;
+@use './resets' as *;
+@use './funciones' as *;
+
+
+.cara-tres {
+    @include tamaño(300px, 300px);
+    background: color($background-orange);    
+
+}
+
+
+.cabeza__cara--tres {
+    @include displayFlex(flex, column, center, center);
+    
+}
+
+
+.cabeza__parte-1 {
+    @include tamaño(250px, 140px);
+    background: color($primary-color);
+    margin-top: 20px;
+    border-top-right-radius: 65%;
+    border-top-left-radius: 65%;
+    border-bottom-left-radius: 65%;
+    border-bottom-right-radius: 65%;
+    border: 2px solid black;
+    box-shadow:  0px 2px 14px 0px black
+}
+
+.lunares {
+    @include tamaño(180px, 50px);
+    margin: 5px auto;
+}
+
+
+.uno,
+.dos,
+.tres,
+.cuatro,
+.cinco,
+.seis {
+    clip-path: ellipse(30% 20% at 32% 31%);
+    @include tamaño(25px, 15px);
+    background: $lunares-color;
+    position: relative;
+}
+
+.dos {
+    position: relative;
+    left: 15px;
+    
+}
+.primer-par{
+    @include tamaño(35px, 20px);
+    margin: 0 auto;
+}
+
+.segundo-par{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    left: 2px;    
+}
+.sub-par{
+    display: flex;
+
+}
+
+.tres {
+    position: relative;
+    left: 15px;
+    top: -5px;
+}
+
+.cuatro{
+    position: relative;
+    top: -10px;
+
+}
+.cinco {
+    position: relative;
+    top: -10px;
+    left: 8px;
+}
+ 
+.seis{
+    position: relative;
+    left: 185px;
+}
+.cejas {
+    @include tamaño(100px, 30px);
+    position: relative;
+    top: -5px;
+    @include displayFlex(flex, row, center, center);
+    margin: 0 auto;
+}
+
+.cejas__item--abajo {
+    @include tamaño(52px, 24px);
+    border: 3px solid black;
+    @include borderRadius(50%);
+    position: relative;
+    top: 2px;
+    clip-path: ellipse(39% 49% at 52% 64%);
+}
+.cejas__item--arriba {
+    @include tamaño(51px, 31px);
+    border: 3px solid black;
+    @include borderRadius(100%);   
+    position: relative;
+    top: 5px;
+    clip-path: ellipse(41% 22% at 60% 25%);
+}
+
+
+
+
+.cabeza__parte-2{
+    @include tamaño(100px, 40px);
+    background: color($primary-color);
+    @include position(relative, -8px, auto, auto, auto);
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    z-index: 1;
+}
+
+.eyes {
+    position: relative;
+    top: -95px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.eyes__ojos--item{
+    border: 2px solid black;
+    @include tamaño(40px, 70px);
+    border-radius: radius(100%);
+}
+
+.eyes__ojos {
+    @include tamaño(80px, 70px);
+    @include displayFlex(flex, row, center, flex-start);
+    z-index: 2;
+}
+.ojo {
+    clip-path: ellipse(50% 50% at 48% 0%);
+    @include tamaño(100%, 100%);
+    @include bordersRadius(0px, 0px, 100px, 100px);
+    border-top: 2px solid black;
+    background: white;
+    position: relative;
+    top: -50%;
+    left: 1px;
+}
+
+.ojo__centro {
+    clip-path: ellipse(14% 16% at 50% 12%);
+    @include tamaño(100%, 100%);
+    position: relative;
+    top: 34px;
+    z-index: 2;
+    background: $eyes-color;
+}
+
+.nariz{
+    @include tamaño(35px, 68px);
+    @include bordersRadius(80%, 80%, 100%, 100%);
+    border: 1px solid black;
+    border-top: none;
+    position: relative;
+    margin: 0 auto;
+    top: -145px;
+    background: $primary-color;
+    z-index: 1;
+}
+
+.cabeza__parte-3{
+    @include tamaño(160px, 35px);
+    border: 2px solid black;
+    margin: 0 auto;
+    @include position(relative, -81px, auto, auto, auto);
+    background: color($primary-color) ;
+    @include borderRadius(50px);
+
+    box-shadow:  0px 2px 14px 0px black
+}
+
+.mouth{
+    @include tamaño(80%, 2px);
+    background: black;
+    top: 50%;
+    left: 15px;
+    z-index: 1;
+    position: absolute;
+}
+
+.comisura__a {
+    @include tamaño(12px, 20px);
+    clip-path: ellipse(81% 61% at 73% 47%);
+    @include bordersRadius(50%, 0, 50%, 0);
+    border-left: 4px solid black;
+    position: absolute;
+    z-index: 1;
+    top: 7px;
+    left: 10px;
+    
+}
+
+.comisura__b {
+    @include tamaño(12px, 20px);
+    @include bordersRadius(0, 50%, 0, 50%);
+    clip-path: ellipse(81% 61% at 73% 47%);
+    border-right: 4px solid black;
+    position: absolute;
+    z-index: 1;
+    top: 7px;
+    right: 10px;
+}
+

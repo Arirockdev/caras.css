@@ -1,0 +1,145 @@
+@use './variables' as *;
+@use './mixins' as *;
+@use './resets' as *;
+@use './funciones' as *;
+
+
+.cara-dos {
+    @include tamaño(300px, 300px);
+    @include displayFlex(flex, column, flex-start, center);
+}
+
+
+.cara__body {
+    @include tamaño(200px, 200px);
+    @include borderRadius(50%);
+    background: color($bg-cuerpo);
+    border: 3px solid color(hsl(0, 0%, 0%));
+    @include displayFlex(flex, column, center, center);
+    z-index: 1;
+    @include position(relative, -40px, auto, auto, auto);
+}
+
+.cara__ojos {
+    @include tamaño(100px, 55px);
+    @include displayFlex(flex, row, space-evenly, center);
+    margin: 2rem auto;
+}
+
+
+
+.ojos {
+    @include tamaño(25px, 60px);
+    @include borderRadius(85%);
+    background: repeating-linear-gradient(color($ojos), color($ojos),color($fondo-ojos));
+    @include displayFlex(flex, row, center, start);
+    border: 3px solid color($ojos);
+}
+
+.ojos__item {
+    @include tamaño(30px, 30px);
+    @include clipPath(ellipse(30% 28% at 50% 55%));
+    background: color(white);
+    margin: 0.2rem;
+}
+.cara__mejilla{
+    @include displayFlex(flex, row, center, stretch);
+}
+
+.mejilla {
+    @include tamaño(150px, 30px);
+    @include displayFlex(flex, row, space-between, center);
+    @include position(relative, -30px, auto, auto, auto);
+}
+
+.mejilla__item {
+    @include tamaño(50px, 20px);
+    @include clipPath(ellipse(35% 38% at 50% 55%));
+    background: color($color-cachetes);
+    &:first-child {
+        transform: rotateZ(15deg);
+    };
+    &:last-child {
+        transform: rotateZ(-15deg);
+    };
+}
+
+.boca {
+    @include tamaño(30px, 40px);
+    @include position(relative, -40px, auto, auto, auto);
+    border: 3px solid color(#000);
+    margin: 0 auto;
+    border-bottom-left-radius: radius(50px);
+    border-bottom-right-radius: radius(50px);
+    border-top-left-radius: radius(15px);
+    border-top-right-radius: radius(15px);
+    background: color($bg-boca)
+
+}
+
+.boca__lengua {
+    @include tamaño(auto, 25px);
+    @include position(relative, 10px, auto, auto, auto);
+    @include borderRadius(50%);
+    border-top: 4px solid color(#000);
+    background: color($color-cachetes);
+}
+
+.cara__manos {
+    @include displayFlex(flex, row, center, center);
+}
+
+.manos__item {
+    @include tamaño(40px, 70px);
+    border-top-left-radius: radius(80px);
+    border-top-right-radius: radius(60px);
+    border-bottom-left-radius: radius(60px);
+    border-bottom-right-radius: radius(80px);
+    border: 3px solid color(#000); 
+    background: color($bg-cuerpo);
+    &:first-child {
+        @include position(relative, 50px, 60px, auto, auto);
+        transform: rotate(-45deg);
+    };
+    &:last-child {
+        @include position(relative, 120px, auto, auto, 70px);
+        transform: rotate(-45deg);
+    }
+
+}
+
+.cara__pies {
+    @include displayFlex(flex, row, space-between, center);
+    @include tamaño(200px, auto);
+}
+
+.pies__item {
+    @include tamaño(80px, 50px);
+    border: 3px solid color(#000);
+    @include borderRadius(50%);
+    background: color($bg-pies);
+    margin: 0 auto;
+    @include position(relative, -80px, auto, auto, auto);
+}
+
+
+.pies__puntera--izq, 
+.pies__puntera--der {
+    background: color($bg-punteras);
+    @include tamaño(50px, 50px);
+    @include clipPath(ellipse(15% 24% at 50% 55%));
+}
+
+.pies__puntera--izq {
+    @include position(relative, auto, 15px, auto, auto);
+    transform: rotate(-45deg);
+}
+.pies__puntera--der {
+    @include position(relative, auto, auto, auto, 40px);
+    transform: rotate(45deg);
+}
+
+
+
+
+
