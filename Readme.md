@@ -1,8 +1,7 @@
 # Dibujo de caras hecho con css
 
-## Imagen original
+## dibujo original
+![dibujo original](https://github.com/Arirockdev/caras.css/blob/main/src/assets/original.jpg)
 
-![Imagen Original](/caras/src/assets/original.jpg)
-## Imagen dibujadas para con css para este repo
-
-![Imagen Copia](/caras/src/assets/mio.jpeg)
+## dibujo hecho con css
+![dibujo hecho con css](https://github.com/Arirockdev/caras.css/blob/main/src/assets/mio.jpeg)
